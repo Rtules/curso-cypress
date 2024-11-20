@@ -1,1 +1,3 @@
-export class SignupData{}
+export class SignupData{
+    
+}
