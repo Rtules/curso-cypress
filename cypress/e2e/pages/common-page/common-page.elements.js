@@ -11,14 +11,17 @@ export class CommonPageElements {
             return cy.contains("a", "About us");
         },
         get cart(){
-            return cy.contains("a", "cart");
+            return cy.contains("a", "Cart");
         },
         get login(){
-            return cy.contains("a", "log in");
+            return cy.contains("a", "Log in");
         },
         get singnup(){
             return cy.contains("a", "Sign up");
         },
     };
   }  
+  static get signedUser(){
+    return cy.get("a#nameofuser");
+  }
 }
