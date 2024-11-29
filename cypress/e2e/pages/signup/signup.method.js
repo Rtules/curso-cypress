@@ -19,5 +19,7 @@ static signup(username, password) {
 static verifySignupSuccessfulMessageIsDisplayed(){
     CommonPageMethods.verifyAlert("Sign up successful.");
 }
-
+ static verifyThatThisUserAlreadyExistsMessageisDisplayed(){
+    CommonPageMethods.verifyAlert("This user already exist.");
+ }
 }
