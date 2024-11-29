@@ -26,4 +26,26 @@ describe(CommonPageData.testSuites.autenticacion, ()=>{
         CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
         
     });
+
+    it('Inicio de sesión inválido', ()=>{
+        Logger.stepNumber(1)
+        Logger.step('Navegar a la página de inicio');
+        CommonPageMethods.navigateToDemoBlaze();
+
+        Logger.stepNumber(2);
+        Logger.step('hacer clic en el "log in" de la barra de navegación');
+        CommonPageMethods.clickOnLoginOption();
+
+        Logger.stepNumber(3);
+        Logger.step('Ingresar un usuario y contraseña invalidos');
+        LoginMethods.insertUsername(LoginData.validCredentials.username);
+        LoginMethods.insertPassword('contraseña invalida');
+
+        Logger.stepNumber(4);
+        Logger.step('Hacer clic en "log in" para iniciar sesión');
+        LoginMethods.clickOnLoginButton();
+        Logger.verification('Verificar que se muestra un mensaje de error');
+        LoginMethods.verifyWrongPasswordMessage();
+        
+    });
 });
