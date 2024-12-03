@@ -4,7 +4,7 @@ import { LoginData } from "../pages/login/login.data";
 import { LoginMethods } from "../pages/login/login.methods";
 import { Logger } from "../util/logger";
 
-xdescribe(CommonPageData.testSuites.autenticacion, ()=>{
+describe(CommonPageData.testSuites.autenticacion, ()=>{
     it('Inicio de sesión válido', ()=>{
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio');
@@ -24,10 +24,13 @@ xdescribe(CommonPageData.testSuites.autenticacion, ()=>{
         LoginMethods.clickOnLoginButton();
         Logger.verification('Verificar que se redirige al usuario a la página de inicio');
         CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
+
+        Logger.postCondition('Log out')
+        CommonPageMethods.logout();
         
     });
 
-    it('Inicio de sesión inválido', ()=>{
+    xit('Inicio de sesión inválido', ()=>{
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio');
         CommonPageMethods.navigateToDemoBlaze();

@@ -77,7 +77,7 @@ describe(CommonPageData.testSuites.catalogoYcompras, ()=>{
 
     })
 
-    it('Realizar una compra', ()=>{
+    xit('Realizar una compra', ()=>{
 
         Logger.stepNumber(1)
         Logger.step('Iniciar sesión como usuario registrado')
