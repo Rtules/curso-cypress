@@ -2,7 +2,7 @@ import { HomeElements } from "./home.elements";
 
 export class HomeMethods{
     static clickOnPhonesOption(){
-        HomeElements.categoriesMenu.phones.click();
+        HomeElements.categoriesMenu.phone.click();
     }
 
     static clickOnLaptopsOption(){
@@ -18,4 +18,7 @@ export class HomeMethods{
  static verifyProducDisplayed(productName){
     HomeElements.product(productName).should('be.visible')
 }
+    static verifyHomePageIsShown(){
+        cy.url().should('include', 'index.html')
+    }
 }

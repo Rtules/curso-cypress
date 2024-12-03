@@ -2,9 +2,11 @@ import { expect } from "chai";
 import { CommonPageData } from "./common-page.data";
 import { CommonPageElements } from "./common-page.elements";
 
+
 export class CommonPageMethods{
     static navigateToDemoBlaze(){
-        cy.clearCookies();
+        cy.clearAllCookies();
+        cy.clearLocalStorage();
         cy.visit(CommonPageData.url);
     }
 
@@ -19,8 +21,8 @@ export class CommonPageMethods{
         CommonPageElements.topMenu.aboutUs.click();
     }
 
-    static clickOnCartOption(){
-        CommonPageElements.topMenu.cart.click();
+    static clickOnCartOption() {
+        CommonPageElements.topMenu.cart.click();     
     }
 
     static clickOnLoginOption(){
