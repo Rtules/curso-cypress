@@ -30,7 +30,7 @@ describe(CommonPageData.testSuites.autenticacion, ()=>{
         
     });
 
-    xit('Inicio de sesión inválido', ()=>{
+    it('Inicio de sesión inválido', ()=>{
         Logger.stepNumber(1)
         Logger.step('Navegar a la página de inicio');
         CommonPageMethods.navigateToDemoBlaze();
