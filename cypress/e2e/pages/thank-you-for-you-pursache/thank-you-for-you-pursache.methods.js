@@ -2,6 +2,7 @@ import { ThankYouForYourPursacheElements } from "./thank-you-for-you-pursache.el
 
 export class ThankYouForYourPursacheMethods{
     static clickOnOkButton(){
+        cypress.wait(1000)
         ThankYouForYourPursacheElements.buttons.ok.click();
     }
 
