@@ -82,7 +82,7 @@ describe(CommonPageData.testSuites.catalogoYcompras, ()=>{
 
     })
 
-    xit('Realizar una compra', ()=>{
+    it('Realizar una compra', ()=>{
 
         Logger.stepNumber(1)
         Logger.step('Iniciar sesión como usuario registrado')
@@ -91,7 +91,7 @@ describe(CommonPageData.testSuites.catalogoYcompras, ()=>{
         Logger.SubStep('Click on "Log in" link')
         CommonPageMethods.clickOnLoginOption();
         LoginMethods.login(user.username, user.password)
-        cy.wait(3000)
+        cy.wait(5000)
 
         Logger.stepNumber(2)
         Logger.step('Navegar a la página de incio')
